@@ -1,0 +1,39 @@
+<p>define([], function () {<br>        return {<br>            page: 1,<br>            offset: 20,<br>            init: function () {<br>                var that = this;<br>                $.getJSON(“/photo/output.json”, function (data) {<br>                    that.render(that.page, data);</p>
+<pre><code>                that.scroll(data);
+            });
+        },
+
+        render: function (page, data) {
+            var begin = (page - 1) * this.offset;
+            var end = page * this.offset;
+            if (begin &gt;= data.length) return;
+            var html, li = &quot;&quot;;
+            for (var i = begin; i &lt; end &amp;&amp; i &lt; data.length; i++) {
+                li += &apos;&lt;li&gt;&lt;div class=&quot;img-box&quot;&gt;&apos; +
+                    &apos;&lt;a class=&quot;img-bg&quot; rel=&quot;example_group&quot; href=&quot;https://github.com/patoo561770064/photos.git&quot;&gt;&lt;/a&gt;&apos; +
+                    &apos;&lt;img lazy-src=&quot;https://github.com/patoo561770064/photos.git&quot; /&gt;&apos; +
+                    &apos;&lt;/li&gt;&apos;;
+            }
+
+            $(&quot;.img-box-ul&quot;).append(li);
+            $(&quot;.img-box-ul&quot;).lazyload();
+            $(&quot;a[rel=example_group]&quot;).fancybox();
+        },
+
+        scroll: function (data) {
+            var that = this;
+            $(window).scroll(function() {
+                var windowPageYOffset = window.pageYOffset;
+                var windowPageYOffsetAddHeight = windowPageYOffset + window.innerHeight;
+                var sensitivity = 0;
+
+                var offsetTop = $(&quot;.instagram&quot;).offset().top + $(&quot;.instagram&quot;).height();
+
+                if (offsetTop &gt;= windowPageYOffset &amp;&amp; offsetTop &lt; windowPageYOffsetAddHeight + sensitivity) {
+                    that.render(++that.page, data);
+                }
+            })
+        }
+    }
+})
+</code></pre>
